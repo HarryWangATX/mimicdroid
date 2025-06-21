@@ -51,7 +51,7 @@
 <section class="hero-header has-background">
   <!-- run infinite loop of video -->
   <video poster="" id="tree" autoplay muted loop class="background-video">
-    <source src="static/videos/BUMBLE_header_small.mp4" type="video/mp4">
+    <source src="static/videos/MimicDroid_header_small.mp4" type="video/mp4">
     Your browser does not support the video tag.
   </video>
 
@@ -61,12 +61,11 @@
         <div class="column has-text-centered">
           <!-- Add title here -->
           <!-- make the size of title greater than 3rem -->
-          <h1 class="title is-1 publication-title is-size-1-mobile" style="color: white; font-weight: bold; margin: 0 auto; text-align: center; font-size: 12rem;">
-              BUMBLE
+          <h1 class="title is-1 publication-title is-size-1-mobile" style="color: white; font-weight: bold; margin: 0 auto; text-align: center; font-size: 11rem;">
+              MimicDroid
           </h1>
           <h2 class="title is-4 publication-title is-size-4-mobile" style="color: white; margin: 0 auto; text-align: center; font-size: 3rem;">
-              Unifying Reasoning and Acting with VLMs for Building-Wide Mobile Manipulation
-          </h2>
+            In-Context Learning for Humanoid Manipulation by Watching Humans          </h2>
           <div class="column has-text-centered">
             <span class="link-block">
               <a href="https://github.com/UT-Austin-RobIn/BUMBLE" target="_blank"
@@ -96,7 +95,7 @@
   <!-- Authors section positioned at the bottom -->
   <div id="author-box" class="author-box" style="position: absolute; bottom: 0; width: 100%; background-color: rgba(255, 255, 255, 0.8); padding: 20px; text-align: center;">
     <h2 class="subtitle is-4 has-text-centered is-size-4-mobile" style="color: #BF5700; font-weight: bold;">
-      Rutav Shah, Albert Yu, Yifeng Zhu, Yuke Zhu<sup>†</sup>, Roberto Martín-Martín<sup>†</sup>
+      Rutav Shah, Qi Wang, Zhenyu Jiang, Shuijing Liu, Sateesh Kumar, Mingyo Seo, Roberto Martín-Martín<sup>†</sup>, Yuke Zhu<sup>†</sup>
     </h2>
     <p class="has-text-centered is-8" style="color: black;">
       <sup>†</sup>Equal advising
@@ -120,7 +119,7 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-           To operate at a building scale, service robots must perform very long-horizon mobile manipulation tasks by navigating to different rooms, accessing different floors, and interacting with a wide and unseen range of everyday objects. We refer to these tasks as Building-wide Mobile Manipulation. To tackle these inherently long-horizon tasks, we propose BUMBLE, a unified VLM-based framework integrating open-world RGBD perception, a wide spectrum of gross-to-fine motor skills, and dual-layered memory. Our extensive evaluation (90+ hours) indicates that BUMBLE outperforms multiple baselines in long-horizon building-wide tasks that require sequencing up to 12 ground truth skills spanning 15 minutes per trial. BUMBLE achieves 47.1% success rate averaged over 70 trials in different buildings, tasks, and scene layouts from different starting rooms and floors. Our user study demonstrates 22% higher satisfaction with our method than state-of-the-art mobile manipulation methods. Finally, we demonstrate the potential of using increasingly capable foundation models to push per- formance further.
+            Humanoid robots offer a versatile platform for manipulation in diverse environments, but fully realizing their potential requires the ability to quickly adapt to novel tasks and scenes from a few demonstrations. In-context learning (ICL) has emerged as a promising framework for few-shot manipulation. However, training ICL models in robotics typically relies on large-scale teleoperated robot datasets, which are costly to collect, especially for high-DoF humanoid platforms. In this work, we explore human play videos, which are unsegmented recordings of people naturally interacting with their environments, as a scalable and diverse data source. However, human play videos lack task labels and introduce embodiment gaps between humans and humanoids. To tackle these challenges, we introduce MEW, which uses hindsight relabeling during training to convert unsegmented play videos into input-output trajectory pairs, enabling a transformer-based policy to match patterns between them without explicit task labels. To bridge the embodiment gap, we use object-centric observations and targeted data augmentation to keep only task-relevant features in the observation space. In simulation and the real-world, MEW demonstrates its strong generalization to novel objects and environments.
           </p>
         </div>
       </div>
@@ -132,12 +131,12 @@
 <section class="hero is-small" id="overview">
   <div class="hero-body">
     <div class="container has-text-centered is-max-desktop">
-      <h1 class="title is-3">BUMBLE Overview</h1>
+      <h1 class="title is-3">MimicDroid Overview</h1>
       <!-- Add an image with caption here -->
       <div class="item">
         <!-- Your video here -->
         <video controls width="100%" autoplay muted loop>
-            <source src="static/videos/BUMBLE_Overview.mp4" type="video/mp4">
+            <source src="static/videos/MimicDroid_Overview.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
         <!-- <h2 class="subtitle has-text-centered"> -->
@@ -153,28 +152,27 @@
 </section>
 
 <!-- Add a video here -->
+<!-- Add a video here -->
 <section class="hero is-small is-light" id="methodology">
   <div class="hero-body">
     <div class="container has-text-centered is-max-desktop">
-      <h2 class="title is-3">BUMBLE Methodology</h2>
+      <h2 class="title is-3">MimicDroid Methodology</h2>
       <div class="item">
-        <video poster="static/images/bumble_fig_method.svg" id="video1" autoplay controls muted loop height="100%">
-          <source src="static/videos/BUMBLE_method_video.mp4" type="video/mp4">
-        </video>
+        <img src="static/images/MimicDroid_method.png" alt="Methodology Figure" style="width: 100%; max-width: 800px;">
       </div>
     </div>
   </div>
 </section>
 
-<!-- Video carousel -->
+
 <section class="hero is-small">
   <div class="hero-body" id="robotvideos">
     <div class="container has-text-centered is-max-desktop">
-      <h2 class="title is-3">Robot Execution Videos</h2>
+      <h2 class="title is-3">Human Play Videos</h2>
       <div id="results-carousel" class="carousel results-carousel">
         <div class="item item-video1">
           <video poster="" id="video1" autoplay controls muted loop height="100%">
-            <source src="static/videos/BUMBLE_diff_start_small.mp4" type="video/mp4">
+            <source src="static/videos/new_play1.mp4" type="video/mp4">
           </video>
           <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
               BUMBLE solves tasks with different initial states in a building.
@@ -182,7 +180,7 @@
         </div>
         <div class="item item-video2">
           <video poster="" id="video2" autoplay controls muted loop height="100%">
-            <source src="static/videos/BUMBLE_diff_task_small.mp4" type="video/mp4">
+            <source src="static/videos/new_play2.mp4" type="video/mp4">
           </video>
           <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
               BUMBLE solves tasks like rearranging chairs, retrieving diet soda can, and retrieving green marker in a building.
@@ -190,7 +188,7 @@
         </div>
         <div class="item item-video3">
           <video poster="" id="video3" autoplay controls muted loop height="100%">
-            <source src="static/videos/BUMBLE_diff_buildings_small.mp4" type="video/mp4">
+            <source src="static/videos/new_play3.mp4" type="video/mp4">
           </video>
           <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
                 BUMBLE operates in different buildings.
@@ -200,6 +198,103 @@
     </div>
   </div>
 </section>
+
+<!-- Video carousel -->
+<section class="hero is-small">
+  <div class="hero-body" id="robotvideos">
+    <div class="container has-text-centered is-max-desktop">
+      <h2 class="title is-3">L1 Execution Videos</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_l1_oven_top_to_plate.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+              BUMBLE solves tasks with different initial states in a building.
+          </h3>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_l1_plate_to_oven_tray.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+              BUMBLE solves tasks like rearranging chairs, retrieving diet soda can, and retrieving green marker in a building.
+          </h3>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_l1_rotating_disk_to_plate.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+                BUMBLE operates in different buildings.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero is-small">
+  <div class="hero-body" id="robotvideos">
+    <div class="container has-text-centered is-max-desktop">
+      <h2 class="title is-3">L2 Execution Videos</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_l2_oven_top_to_plate.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+              BUMBLE solves tasks with different initial states in a building.
+          </h3>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_l2_pate_to_oven_tray.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+              BUMBLE solves tasks like rearranging chairs, retrieving diet soda can, and retrieving green marker in a building.
+          </h3>
+        </div>
+        <div class="item item-video3">
+          <video poster="" id="video3" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_l2_rotating_disk_to_plate.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+                BUMBLE operates in different buildings.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="hero is-small">
+  <div class="hero-body" id="robotvideos">
+    <div class="container has-text-centered is-max-desktop">
+      <h2 class="title is-3">Failure Cases</h2>
+      <div id="results-carousel" class="carousel results-carousel">
+        <div class="item item-video1">
+          <video poster="" id="video1" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_failure2.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+              BUMBLE solves tasks with different initial states in a building.
+          </h3>
+        </div>
+        <div class="item item-video2">
+          <video poster="" id="video2" autoplay controls muted loop height="100%">
+            <source src="static/videos/new_sim_failue_example.mp4" type="video/mp4">
+          </video>
+          <h3 class="subtitle has-text-centered is-6" style="margin-top: 10px;">
+              BUMBLE solves tasks like rearranging chairs, retrieving diet soda can, and retrieving green marker in a building.
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 <!--BibTex citation -->
 <section class="section" id="bibtex">
